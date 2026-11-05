@@ -4,18 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090a0a">
-<title>NOVAS ARCHIVE</title>
+<meta name="theme-color" content="#14251e">
+
+<title>Novas Archive</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italianno&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --bg: #090a0a;
-  --white: #e9e7df;
-  --muted: #777873;
-  --red: #a93c32;
-  --line: #292a27;
+  --green: #14251e;
+  --green-light: #20372c;
+  --cream: #f1ecdf;
+  --gold: #b9a47c;
+  --muted: #aaa997;
 }
 
 * {
@@ -25,275 +29,168 @@
 }
 
 body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: 'Manrope', sans-serif;
   min-height: 100vh;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .12;
-  z-index: 5;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.23'/%3E%3C/svg%3E");
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.mono {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  background: var(--green);
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  height: 76px;
-  padding: 0 5.5%;
+  padding: 30px 7%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-  z-index: 2;
-}
-
-.identity {
-  display: flex;
   align-items: center;
-  gap: 13px;
-}
-
-.symbol {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--red);
-  color: var(--red);
-  display: grid;
-  place-items: center;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
 }
 
 .brand {
-  font-size: 12px;
-  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.header-note {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
   letter-spacing: 2px;
-}
-
-.header-right {
   color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.header-right span:last-child {
-  color: var(--red);
+  text-transform: uppercase;
 }
 
 main {
-  min-height: calc(100vh - 133px);
-  padding: 0 5.5%;
+  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  position: relative;
-}
-
-.topline {
-  display: flex;
   align-items: center;
-  gap: 13px;
-  color: var(--muted);
-  margin-bottom: 28px;
-}
-
-.topline::before {
-  content: "";
-  height: 1px;
-  width: 32px;
-  background: var(--red);
+  padding: 70px 20px 100px;
 }
 
 .hero {
+  width: 100%;
+  max-width: 1050px;
+  text-align: center;
   position: relative;
-  padding-bottom: 48px;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 22px;
+  margin-bottom: 30px;
+  opacity: .85;
+}
+
+.pre-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 15px;
 }
 
 h1 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(100px, 18.5vw, 260px);
-  font-weight: 800;
-  line-height: .72;
-  letter-spacing: -5px;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
+  font-size: clamp(75px, 12vw, 145px);
+  font-weight: 400;
+  line-height: .85;
+  letter-spacing: -4px;
+}
+
+h1 .first {
+  display: block;
 }
 
 h1 .second {
   display: block;
-  color: var(--red);
-  margin-left: 10.5%;
-  margin-top: 24px;
+  font-family: 'Italianno', cursive;
+  font-size: 1.35em;
+  color: var(--gold);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: -4px;
 }
 
-.roman {
+.divider {
+  width: 150px;
+  height: 1px;
+  background: var(--gold);
+  margin: 42px auto 30px;
+  position: relative;
+}
+
+.divider::after {
+  content: "✦";
   position: absolute;
-  right: 3%;
-  top: 7%;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(100px, 18vw, 230px);
-  font-weight: 800;
-  color: #161816;
-  line-height: 1;
-  z-index: 0;
-  user-select: none;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-  gap: 30px;
+  background: var(--green);
+  padding: 0 12px;
+  color: var(--gold);
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
 }
 
 .description {
-  max-width: 350px;
-  font-size: 13px;
-  line-height: 1.8;
-  color: #999a93;
+  max-width: 410px;
+  margin: auto;
+  color: #c3c0b2;
+  font-size: 21px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
-.description strong {
-  color: var(--white);
-  font-weight: 600;
+.description em {
+  color: var(--gold);
 }
 
-.coordinates {
-  text-align: right;
-  color: var(--muted);
-  line-height: 2;
-}
-
-.coordinates span {
-  color: var(--white);
-}
-
-.stamp {
-  position: absolute;
-  right: 6%;
-  top: 12%;
-  width: 85px;
-  height: 85px;
-  border: 1px solid #58302b;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--red);
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 1px;
-  transform: rotate(-15deg);
-  z-index: 2;
-}
-
-.stamp::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px dashed #58302b;
-  border-radius: 50%;
+.signature {
+  margin-top: 38px;
+  font-family: 'Italianno', cursive;
+  font-size: 34px;
+  color: var(--gold);
 }
 
 footer {
-  height: 57px;
-  padding: 0 5.5%;
-  border-top: 1px solid var(--line);
+  padding: 24px 7%;
+  border-top: 1px solid rgba(185,164,124,.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #686963;
-  position: relative;
-  z-index: 2;
+  color: var(--muted);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-footer .red {
-  color: var(--red);
-}
-
-@media (min-width: 1200px) {
-  main {
-    padding-top: 55px;
-    padding-bottom: 55px;
-  }
-}
-
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   header {
-    height: 65px;
+    padding: 25px 6%;
   }
 
-  .header-right {
-    gap: 10px;
-  }
-
-  .header-right span:nth-child(2) {
-    display: none;
+  .header-note {
+    font-size: 8px;
+    letter-spacing: 1px;
   }
 
   main {
-    min-height: calc(100svh - 122px);
-    padding: 60px 6%;
+    padding: 70px 20px;
   }
 
   h1 {
-    font-size: clamp(86px, 20vw, 140px);
-    letter-spacing: -3px;
+    font-size: clamp(65px, 17vw, 100px);
   }
 
-  h1 .second {
-    margin-left: 3%;
-    margin-top: 17px;
-  }
-
-  .stamp {
-    width: 60px;
-    height: 60px;
-    right: 2%;
-    top: -22%;
-    font-size: 7px;
-  }
-
-  .roman {
-    top: 15%;
-    right: 0;
-  }
-
-  .info-row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .coordinates {
-    text-align: left;
+  .description {
+    font-size: 18px;
   }
 
   footer {
+    gap: 15px;
+    flex-wrap: wrap;
     font-size: 8px;
-    letter-spacing: .8px;
   }
 }
 </style>
@@ -302,59 +199,42 @@ footer .red {
 <body>
 
 <header>
-  <div class="identity">
-    <div class="symbol">N</div>
-    <div class="brand">NOVAS ARCHIVE</div>
-  </div>
-
-  <div class="header-right mono">
-    <span>Independent Institution</span>
-    <span>NA / 001</span>
-  </div>
+  <div class="brand">Novas Archive</div>
+  <div class="header-note">An Independent Collection · Est. 2026</div>
 </header>
 
 <main>
-
-  <div class="topline mono">
-    Established 2026 &nbsp; / &nbsp; Archive Division
-  </div>
-
   <section class="hero">
 
-    <div class="roman">N°</div>
+    <div class="ornament">❧</div>
 
-    <div class="stamp">
-      N · A<br>EST. MMXXVI
+    <div class="pre-title">
+      A Repository of Imagined Worlds
     </div>
 
     <h1>
-      NOVAS
-      <span class="second">ARCHIVE.</span>
+      <span class="first">Novas</span>
+      <span class="second">Archive</span>
     </h1>
 
-  </section>
-
-  <section class="info-row">
+    <div class="divider"></div>
 
     <p class="description">
-      <strong>An archive of worlds that never were.</strong><br>
-      Histories, civilizations, records and the
-      remnants of imagined realities.
+      A quiet place for <em>worlds yet unwritten</em>,
+      histories long remembered, and stories
+      that deserve a place in eternity.
     </p>
 
-    <div class="coordinates mono">
-      <div>ARCHIVE ID &nbsp; <span>0866</span></div>
-      <div>STATUS &nbsp; <span>ESTABLISHED</span></div>
-      <div>CLASSIFICATION &nbsp; <span>OPEN</span></div>
+    <div class="signature">
+      — The Archive
     </div>
 
   </section>
-
 </main>
 
-<footer class="mono">
-  <span>© NOVAS ARCHIVE</span>
-  <span>ALL RECORDS <span class="red">/</span> PRESERVED</span>
+<footer>
+  <span>© Novas Archive</span>
+  <span>Records · Worlds · Histories</span>
 </footer>
 
 </body>
